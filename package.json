@@ -1,5 +1,5 @@
 {
-  "name": "copy-of-turion---browser-automation-api",
+  "name": "turion---professional-browser-automation",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -13,7 +13,8 @@
     "react": "^19.2.4",
     "recharts": "^3.7.0",
     "lucide-react": "^0.564.0",
-    "react-router-dom": "^7.13.0"
+    "react-router-dom": "^7.13.0",
+    "framer-motion": "^11.11.11"
   },
   "devDependencies": {
     "@types/node": "^22.14.0",

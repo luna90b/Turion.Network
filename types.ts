@@ -34,3 +34,18 @@ export interface ApiCall {
   time: string;
   duration: string;
 }
+
+export interface Testimonial {
+  id: string;
+  name: string;
+  role: string;
+  company: string;
+  content: string;
+  avatar: string;
+}
+
+export interface SystemStatus {
+  component: string;
+  status: 'operational' | 'degraded' | 'outage';
+  uptime: string;
+}

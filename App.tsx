@@ -5,7 +5,8 @@ import LandingPage from './pages/LandingPage';
 import Dashboard from './pages/Dashboard';
 import ApiKeys from './pages/ApiKeys';
 import Documentation from './pages/Documentation';
-import Layout from './components/Layout';
+import Playground from './pages/Playground';
+import Status from './pages/Status';
 import DashboardLayout from './components/DashboardLayout';
 
 const App: React.FC = () => {
@@ -14,15 +15,17 @@ const App: React.FC = () => {
       <Routes>
         {/* Public Routes */}
         <Route path="/" element={<LandingPage />} />
+        <Route path="/status" element={<Status />} />
+        <Route path="/playground" element={<Playground />} />
         
         {/* Dashboard Routes with Nested Layout */}
         <Route path="/dashboard" element={<DashboardLayout />}>
           <Route index element={<Dashboard />} />
           <Route path="keys" element={<ApiKeys />} />
           <Route path="docs" element={<Documentation />} />
-          <Route path="billing" element={<div className="p-8 text-center text-slate-400">Billing details coming soon...</div>} />
-          <Route path="settings" element={<div className="p-8 text-center text-slate-400">Settings coming soon...</div>} />
-          <Route path="stats" element={<div className="p-8 text-center text-slate-400">Full usage stats coming soon...</div>} />
+          <Route path="billing" element={<div className="p-12 text-center text-stone-500 font-medium">Billing and Subscription management.</div>} />
+          <Route path="settings" element={<div className="p-12 text-center text-stone-500 font-medium">Account Settings.</div>} />
+          <Route path="stats" element={<div className="p-12 text-center text-stone-500 font-medium">Detailed Analytics.</div>} />
         </Route>
 
         {/* Fallback */}
